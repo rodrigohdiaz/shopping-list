@@ -1,0 +1,32 @@
+#!/usr/bin/env node
+
+const app = require('./src/App')
+
+
+const cmd = process.argv[2]
+const note = process.argv[3]
+const taskData = process.argv[4]
+
+switch (cmd) {
+  case 'list':
+    app.list()
+    break
+
+    //adding the delete case option for the switch
+  case 'delete':
+    app.deleteTodo(note)
+    break
+    
+    //adding the search case option for the switch
+  case 'update':
+    app.updateTodo(note, taskData)
+    break
+
+    //adding the search case option for the switch
+  case 'completed':
+    app.completeTodo(note, taskData)
+    break  
+
+  default:
+    console.log(`I don't understand that command: ${cmd}`)
+}
