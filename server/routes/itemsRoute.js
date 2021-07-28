@@ -66,7 +66,6 @@ router.patch('/:id', (req, res) => {
 // Delete an item from the database
 router.delete('/:id', (req, res) => {
   const id = Number(req.params.id)
-  console.log("itemRoute DELETE:", id)
   db.deleteItemById(id)
     .then((post) => {
       return res.status(200).json(post)

@@ -42,7 +42,6 @@ export function updateItem (item) {
 
 // Create deleteItem function for api on client components side
 export function deleteItem (itemId) {
-  console.log("api.js deleteItem:", itemId)
   return request.del(`/api/v1/items/${itemId}`)
     .then(res => {
       return res.body

@@ -21,7 +21,6 @@ export default class App extends React.Component {
   fetchItems () {
     return getItems()
       .then(items => {
-        console.log('GOT getItems')
         this.setState({items: items})
       })
       .catch(err => {
