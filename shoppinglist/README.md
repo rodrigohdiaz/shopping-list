@@ -8,8 +8,8 @@ In the terminal run the following commands:
 `npm install` 
 `npm install knex`
 `npm install knex sqlite3`
-`npx knex migrate:latest --knexfile knexfile.js migrate:latest`
-`npx knex --knexfile knexfile.js seed:run`
+`npx knex migrate:latest --knexfile ./server/db/knexfile.js migrate:latest`
+`npx knex --knexfile ./server/db/knexfile.js seed:run`
 
 # Run
 In the terminal type 'npm start' in order to run the code, if a browser doesn't automatically open, in your prefered internet browser type 'localhost:3000' and the app should be running there.
