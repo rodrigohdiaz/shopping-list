@@ -131,7 +131,6 @@ function updateItem(item) {
 } // Create deleteItem function for api on client components side
 
 function deleteItem(itemId) {
-  console.log("api.js deleteItem:", itemId);
   return superagent__WEBPACK_IMPORTED_MODULE_0___default.a.del("/api/v1/items/".concat(itemId)).then(function (res) {
     return res.body;
   }).catch(errorHandler('DELETE', '/api/v1/items/:id'));
@@ -219,8 +218,6 @@ var App = /*#__PURE__*/function (_React$Component) {
       var _this2 = this;
 
       return Object(_api__WEBPACK_IMPORTED_MODULE_2__["getItems"])().then(function (items) {
-        console.log('GOT getItems');
-
         _this2.setState({
           items: items
         });
